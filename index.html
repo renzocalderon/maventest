@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAVEN Health — coming soon</title>
+<meta name="description" content="MAVEN Health is an AI-powered patient–provider bridge. Our site is coming soon.">
+<meta name="theme-color" content="#F6F9FB">
+<link rel="icon" href="logo-512.png" type="image/png">
+<link rel="apple-touch-icon" href="logo-512.png">
+
+<meta property="og:title" content="MAVEN Health">
+<meta property="og:description" content="An AI-powered patient–provider bridge. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mavenhealth.app/">
+<meta property="og:image" content="https://mavenhealth.app/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --blue:#5AA0F5;
+    --teal:#55CCBD;
+    --peach:#FAB372;
+    --mark:#018CE6;
+    --slate:#647794;
+    --ink:#2B3A4D;
+    --ground:#F6F9FB;
+    --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 24px;
+    background:
+      radial-gradient(115% 85% at 50% 0%, #FFFFFF 0%, rgba(255,255,255,0) 58%),
+      radial-gradient(70% 55% at 12% 8%, rgba(250,179,114,.16) 0%, rgba(250,179,114,0) 70%),
+      radial-gradient(75% 60% at 88% 12%, rgba(85,204,189,.18) 0%, rgba(85,204,189,0) 70%),
+      var(--ground);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  main{width:100%;max-width:560px;text-align:center}
+
+  /* ---- logo ---- */
+  .logo{
+    display:block;width:100%;max-width:420px;height:auto;margin:0 auto;
+    animation:rise .9s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  /* ---- the arch rule: signature element ---- */
+  .arch{display:block;width:180px;height:44px;margin:34px auto 0;overflow:visible}
+  .arch path{
+    fill:none;stroke:url(#span);stroke-width:3.5;stroke-linecap:round;
+    stroke-dasharray:1 1;
+    animation:draw 1.5s .45s cubic-bezier(.35,.05,.3,1) both;
+  }
+  @keyframes draw{from{stroke-dasharray:0 1}to{stroke-dasharray:1 1}}
+  .pier{fill:var(--blue)}
+  .pier.right{fill:var(--teal)}
+  .piers circle{opacity:0;animation:pop .5s 1.75s cubic-bezier(.2,.9,.3,1) both}
+  .piers circle:last-child{animation-delay:1.85s}
+  @keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+
+  /* ---- copy ---- */
+  .status{
+    margin:22px 0 0;
+    font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--mark);
+    animation:rise .8s .3s cubic-bezier(.2,.7,.3,1) both;
+  }
+  p.lede{
+    margin:14px auto 0;max-width:44ch;
+    font-size:clamp(16px,2.6vw,17.5px);font-weight:400;color:var(--slate);
+    animation:rise .8s .42s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .contact{
+    margin:30px 0 0;font-size:14.5px;color:var(--slate);
+    animation:rise .8s .54s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .contact a{
+    color:var(--mark);text-decoration:none;font-weight:500;
+    border-bottom:1px solid rgba(1,140,230,.32);padding-bottom:1px;
+  }
+  .contact a:hover,.contact a:focus-visible{border-bottom-color:var(--mark)}
+  a:focus-visible{outline:2px solid var(--mark);outline-offset:3px;border-radius:2px}
+
+  footer{
+    margin:44px 0 0;font-size:12px;letter-spacing:.02em;color:#8C9AAC;
+    animation:rise .8s .66s cubic-bezier(.2,.7,.3,1) both;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .logo,.status,p.lede,.contact,footer,.arch path,.piers circle{animation:none}
+    .arch path{stroke-dasharray:none}
+    .piers circle{opacity:1}
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="logo.png" width="420" height="302"
+         alt="MAVEN Health — an AI-powered patient–provider bridge">
+
+    <svg class="arch" viewBox="0 0 180 44" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="span" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#5AA0F5"/>
+          <stop offset="50%"  stop-color="#5AA0F5"/>
+          <stop offset="50%"  stop-color="#55CCBD"/>
+          <stop offset="100%" stop-color="#55CCBD"/>
+        </linearGradient>
+      </defs>
+      <path d="M8 40 C 8 6, 172 6, 172 40" pathLength="1"/>
+      <g class="piers">
+        <circle class="pier" cx="8" cy="40" r="4"/>
+        <circle class="pier right" cx="172" cy="40" r="4"/>
+      </g>
+    </svg>
+
+    <p class="status">Coming soon</p>
+
+    <p class="lede">We're building the connection between what patients track day to day and what their clinicians see at the visit. More here shortly.</p>
+
+    <!-- Replace with a mailbox that actually receives mail. See note below. -->
+    <p class="contact">Questions in the meantime: <a href="mailto:hello@mavenhealth.app">hello@mavenhealth.app</a></p>
+
+    <footer>© <span id="y">2026</span> MAVEN Health</footer>
+  </main>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
